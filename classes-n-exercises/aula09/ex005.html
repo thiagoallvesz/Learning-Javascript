@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(63, 93, 175);
+            color: white;
+            font: normal 1.5em Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>
+        Aqui vai o resuldado
+    </p>
+    <p>
+        Aprendendo a usar <strong>DOM</strong> em JS.
+    </p>
+    <div id="msg">
+        Clique em mim...
+    </div>
+
+    <script>
+
+        /* 
+        window.document.write(window.document.characterSet);
+        window.document.write('Está escrito assim: ' + p1.innerText);
+        */
+
+        /*
+        var corpo = document.body;
+        corpo.style.background = 'black'
+        */
+
+        /*
+        var p1 = window.document.getElementsByTagName('p')[1];
+        document.write(p1.innerHTML);
+        p1.style.color = 'LightGreen';
+        */
+
+        /*
+        var d = document.getElementById('msg')
+        d.style.color = 'LightGreen'
+        d.innerText = 'Estoua aguardando...'
+        window.document.getElementById('msg').innerText = 'Olá!';
+        */
+
+        /*
+        var d = window.document.getElementsByName('msg')[0];
+        d.innerText = 'Oi'
+        */
+
+        /* 
+        var d = window.document.getElementsByClassName('msg')[0];
+        d.innerHTML = 'Oi!'
+        d.style.color = 'Yellow'
+        */
+
+        var d = document.querySelector('div#msg');
+        d.innerText = 'Hello!'
+    </script>
+</body>
+</html>

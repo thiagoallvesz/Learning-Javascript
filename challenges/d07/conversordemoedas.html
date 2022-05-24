@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+    <style>
+        h1 {
+            font: normal 45px Arial;
+        }
+        #conv {
+            width: 150px;
+            height: 50px;
+            padding: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: normal 20px Arial;
+            color: white;
+            background-color: rgb(28, 28, 138);
+        }
+        #res {
+            margin-top: 45px;
+            font: normal 17px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ &RightArrow; US$</h1>
+    <div id="conv" onclick="converter()">
+        Converter
+    </div>
+    <div id="res">
+        Clique no botão acima para iniciar.
+    </div>
+
+    <script>
+        var cotacao = Number(prompt('Antes de mais nada... Quanto está a cotação do dólar agora?'))
+
+        var res = document.getElementById('res')
+
+        function converter() {
+            let reais = Number(prompt('Quantos R$ você tem na carteira?'))
+            let dolar = reais / cotacao
+            res.innerHTML = `<p>Com <strong>${reais.toFixed(2).replace(".", ",")}</strong> reais, você poderá comprar <strong>${dolar.toFixed(2).replace(".", ",")}</strong> Dólares.</p>`
+        }
+        
+    </script>
+</body>
+</html>

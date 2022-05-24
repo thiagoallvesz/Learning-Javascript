@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de idade</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Verificando idades</h1>
+        </header>
+        <section>
+            <div>
+                <form action="#">
+                    <div>
+                        <span>Ano de nascimento:</span>
+                        <input type="number" name="txtano" id="txtano" min="0">
+                    </div>
+                    <div>
+                        <span>Sexo:</span>
+                        <input type="radio" name="radsex" id="masc">
+                        <label for="masc">Masculino</label>
+                        <input type="radio" name="radsex" id="fem">
+                        <label for="fem">Feminino</label>
+                    </div>
+                    <div>
+                        <input type="button" value="Verificar" onclick="verificar()">
+                    </div>
+                </form>
+            </div>
+            <div id="res">
+                <p>
+                    Preencha os dados acima para ver o resutado!
+                </p>
+            </div>
+        </section>
+        <footer>
+            <span>&copy;</span>
+            <span>DevalvesTH</span>
+        </footer>
+    </main>
+    <script src="modelo.js"></script>
+</body>
+</html>

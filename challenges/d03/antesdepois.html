@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e depois</title>
+    <style>
+        h1 {
+            font: normal 47px Arial;
+        }
+        div {
+            width: 150px;
+            height: 50px;
+            padding: 7px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(209, 213, 218);
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <div id="box" onclick="antesedepois()">
+        Antecessor e Sucessor
+    </div>
+
+    <script>
+        let caixa = document.getElementById('box')
+        function antesedepois() {
+            numero = Number(prompt('Digite um número inteiro qualquer abaixo'))
+            let antes = numero - 1
+            let depois = numero + 1
+            alert(`Antes de ${numero}, temos o número ${antes}.\nDepois de ${numero}, temos o número ${depois}.`)
+        }
+    </script>
+</body>
+</html>

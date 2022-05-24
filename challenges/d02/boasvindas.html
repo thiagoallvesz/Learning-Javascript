@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-vindas</title>
+    <style>
+        h1 {
+            font: normal 45px Arial;
+        }
+        div {
+            width: 150px;
+            height: 50px;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font: normal 17px Arial;
+            color: white;
+            background-color: rgb(32, 16, 175);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo!</h1>
+    <div id="button" onclick="iniciar()">
+        Inicie o desafio
+    </div>
+
+    <script>
+        let botao = document.getElementById('button')
+        function iniciar() {
+            nome = prompt('Qual é o seu nome?')
+            idade = prompt(`Olá, ${nome}. Quantos anos você tem?`)
+            alert(`Acabei de conhecer o ${nome}, que tem ${idade} anos de idade.`)
+        }
+    </script>
+</body>
+</html>

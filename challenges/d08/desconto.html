@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de desconto</title>
+    <style>
+        h1 {
+            font: bolder 55px Arial;
+        }
+        #desc {
+            width: 150px;
+            height: 50px;
+            margin-bottom: 50px;
+            padding: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: normal 18px Arial;
+            color: white;
+            background-color: blue;
+        }
+        #res {
+            font: normal 25px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular desconto</h1>
+    <div id="desc" onclick="calcular()">
+        Desconto de 10%
+    </div>
+    <div id="res">
+        Clique no botão acima para iniciar.
+    </div>
+
+    <script>
+        let res = document.getElementById('res')
+
+        function calcular() {
+            res.innerHTML = 'Calculando...'
+            let produto = String(prompt('Qual é o produto que você está comprando?'))
+            let preco = Number(prompt(`Qual é o preço de ${produto}?`))
+
+            let desconto = (preco * 10) / 100
+            let pagar = preco - desconto
+            
+            res.innerHTML += `<p><strong>10% desconto para ${produto}...</string></p>`
+            res.innerHTML += `<p>O preço original é R$ <strong>${preco.toFixed(2).replace(".", ",")}</strong>.</p>`
+            res.innerHTML += `<p>Você economizará R$ <strong>${desconto.toFixed(2).replace(".", ",")}</strong> de desconto.</p>`
+            res.innerHTML += `<p>No final da compra, você só irá pagar R$ <strong>${pagar.toFixed(2).replace(".", ",")}</strong> pelo produto <strong>${produto}</strong>.</p>`
+        }
+        
+    </script>
+</body>
+</html>
